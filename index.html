@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Менеджер по привлечению партнеров – Химчистка Норма</title>
+<style>
+  :root{
+    --ink:#15202b;
+    --ink-soft:#4a5a68;
+    --paper:#f7f5f0;
+    --card:#ffffff;
+    --accent:#1f7a6b;
+    --accent-soft:#e3f0ed;
+    --line:#e2ded5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+  /* HERO */
+  header{
+    background:var(--ink);
+    color:#fff;
+    padding:64px 0 56px;
+  }
+  .eyebrow{
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#8fb8b0;
+    margin-bottom:22px;
+  }
+  h1{
+    font-size:46px;
+    line-height:1.12;
+    font-weight:700;
+    letter-spacing:-.02em;
+    margin-bottom:20px;
+  }
+  .lede{
+    font-size:19px;
+    color:#c7d2d8;
+    max-width:600px;
+  }
+  .facts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:32px;
+  }
+  .fact{
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:100px;
+    padding:7px 16px;
+    font-size:14px;
+    color:#dfe7ea;
+  }
+
+  /* SECTIONS */
+  section{padding:48px 0}
+  section + section{border-top:1px solid var(--line)}
+  h2{
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:20px;
+    font-weight:700;
+  }
+  h3{
+    font-size:22px;
+    font-weight:650;
+    margin:28px 0 12px;
+    letter-spacing:-.01em;
+  }
+  p{font-size:17px;color:var(--ink-soft);margin-bottom:14px}
+  p.big{font-size:19px;color:var(--ink)}
+  strong{color:var(--ink);font-weight:650}
+
+  ul{list-style:none;margin:6px 0 4px}
+  li{
+    position:relative;
+    padding-left:26px;
+    font-size:17px;
+    color:var(--ink-soft);
+    margin-bottom:9px;
+  }
+  li::before{
+    content:"";
+    position:absolute;
+    left:4px;top:11px;
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--accent);
+    opacity:.55;
+  }
+
+  /* FLOW */
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px;
+    background:var(--accent-soft);
+    border-radius:14px;
+    padding:20px 22px;
+    margin:4px 0 26px;
+  }
+  .flow span{font-weight:650;font-size:16px;color:#14564b}
+  .flow i{color:#6aa79b;font-style:normal}
+
+  /* CALLOUT */
+  .callout{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:0 12px 12px 0;
+    padding:22px 24px;
+    margin:22px 0;
+  }
+  .callout p:last-child{margin-bottom:0}
+
+  /* OFFER CARDS */
+  .cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:6px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 20px;
+    font-size:16px;
+    color:var(--ink-soft);
+  }
+  .card b{display:block;color:var(--ink);font-weight:650;margin-bottom:4px;font-size:16px}
+
+  /* FUNNEL */
+  .funnel{margin-top:6px}
+  .step{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:11px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .step:last-child{border-bottom:none}
+  .step em{
+    font-style:normal;
+    font-variant-numeric:tabular-nums;
+    color:var(--accent);
+    font-weight:700;
+    font-size:14px;
+    min-width:22px;
+  }
+  .step span{font-size:17px;color:var(--ink)}
+
+  footer{
+    background:var(--ink);
+    color:#9fb3bb;
+    padding:34px 0;
+    font-size:15px;
+  }
+  footer b{color:#fff;display:block;font-size:17px;margin-bottom:6px;font-weight:650}
+
+  @media (max-width:640px){
+    h1{font-size:34px}
+    .lede{font-size:17px}
+    .cards{grid-template-columns:1fr}
+    header{padding:48px 0 40px}
+    section{padding:38px 0}
+  }
+  @media print{
+    body{background:#fff}
+    header,footer{background:#15202b !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .flow,.card,.callout{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Химчистка Норма</div>
+    <h1>Менеджер по привлечению партнеров</h1>
+    <p class="lede">Мы делаем химчистку такой же доступной, как получение заказа в ПВЗ. Сейчас строим партнерскую сеть – и ищем человека, который подключит к ней сотни пунктов выдачи.</p>
+    <div class="facts">
+      <div class="fact">Москва, работа в полях</div>
+      <div class="fact">Фикс + бонус за результат</div>
+      <div class="fact">Партнерская сеть с нуля</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>О проекте</h2>
+    <p class="big">Химчистка Норма развивает партнерскую сеть на базе ПВЗ крупнейших e-commerce платформ – Ozon, Wildberries и других сервисов.</p>
+    <p>Клиент сдает вещи в ближайшем пункте выдачи, мы забираем их на обработку, а после готовности возвращаем обратно в тот же пункт. Никаких отдельных поездок в химчистку – все происходит там, куда человек и так заходит за посылками.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Что нужно будет делать</h2>
+    <p>Ты отвечаешь за весь цикл подключения партнера:</p>
+    <div class="flow">
+      <span>найти</span><i>→</i>
+      <span>заинтересовать</span><i>→</i>
+      <span>договориться</span><i>→</i>
+      <span>подключить</span><i>→</i>
+      <span>запустить</span>
+    </div>
+
+    <h3>Поиск и переговоры</h3>
+    <ul>
+      <li>самостоятельно искать потенциальные ПВЗ и их владельцев;</li>
+      <li>формировать и вести базу потенциальных партнеров;</li>
+      <li>связываться с собственниками и управляющими по телефону, в мессенджерах и лично;</li>
+      <li>презентовать партнерскую программу и объяснять экономику сотрудничества;</li>
+      <li>проводить переговоры и отрабатывать возражения;</li>
+      <li>договариваться об условиях и подключать ПВЗ;</li>
+      <li>оформлять необходимые документы.</li>
+    </ul>
+
+    <h3>Запуск точки</h3>
+    <ul>
+      <li>организовывать запуск точки;</li>
+      <li>приезжать на ПВЗ, знакомиться с партнерами и сотрудниками;</li>
+      <li>передавать и размещать материалы и POSM;</li>
+      <li>обучать сотрудников ПВЗ основам работы с заказами химчистки;</li>
+      <li>контролировать первые заказы и помогать партнеру пройти первые этапы работы.</li>
+    </ul>
+
+    <h3>Дальше</h3>
+    <ul>
+      <li>поддерживать отношения с подключенными партнерами;</li>
+      <li>вести всю информацию и статусы в CRM.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Что важно понимать</h2>
+    <div class="callout">
+      <p><strong>Нам нужен не классический офисный менеджер по продажам.</strong></p>
+      <p>Ты будешь много работать в поле: искать новые точки, встречаться с собственниками, ездить по Москве и самостоятельно развивать свою территорию. При этом большая часть переговоров проходит по телефону и в мессенджерах.</p>
+      <p>Поэтому важно сочетание: <strong>продажи + коммуникация + самостоятельность + готовность много двигаться</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Мы ожидаем</h2>
+    <ul>
+      <li>опыт в продажах, развитии партнерской сети, B2B или B2C;</li>
+      <li>умение самостоятельно находить клиентов и партнеров, а не только работать со входящими заявками;</li>
+      <li>хорошие переговорные навыки;</li>
+      <li>умение быстро устанавливать контакт с незнакомыми людьми;</li>
+      <li>способность спокойно работать с отказами;</li>
+      <li>системность и умение вести большую воронку;</li>
+      <li>готовность к активной работе в поле;</li>
+      <li>уверенное владение CRM, таблицами и мессенджерами;</li>
+      <li>ориентацию на конкретный результат.</li>
+    </ul>
+
+    <h3>Будет большим плюсом</h3>
+    <ul>
+      <li>опыт работы с ПВЗ Ozon / Wildberries;</li>
+      <li>опыт развития партнерских сетей;</li>
+      <li>опыт в франчайзинге;</li>
+      <li>опыт работы с малым и средним бизнесом;</li>
+      <li>собственный автомобиль.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Что предлагаем</h2>
+    <div class="cards">
+      <div class="card"><b>Растущий бизнес</b>Работа в быстрорастущем сервисном бизнесе на этапе, когда сеть только строится.</div>
+      <div class="card"><b>Самостоятельность</b>Большая свобода действий и возможность реально влиять на развитие компании.</div>
+      <div class="card"><b>Понятная зона ответственности</b>Задача не просто обзвонить базу, а запустить работающих партнеров.</div>
+      <div class="card"><b>Деньги</b>Фиксированная часть + бонус за результат, компенсация расходов на поездки.</div>
+      <div class="card"><b>Инструменты</b>CRM и готовые материалы для работы с партнерами.</div>
+      <div class="card"><b>Рост</b>Возможность вырасти в руководителя направления партнерской сети.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Как будем оценивать результат</h2>
+    <p>Основной показатель – <strong>количество активированных и работающих ПВЗ</strong>, а не количество совершенных звонков. Смотрим на всю воронку целиком:</p>
+    <div class="funnel">
+      <div class="step"><em>01</em><span>новые контакты</span></div>
+      <div class="step"><em>02</em><span>переговоры</span></div>
+      <div class="step"><em>03</em><span>договоренности</span></div>
+      <div class="step"><em>04</em><span>подключенные ПВЗ</span></div>
+      <div class="step"><em>05</em><span>запущенные ПВЗ</span></div>
+      <div class="step"><em>06</em><span>первые заказы</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Химчистка «Норма»</b>
+    Новая норма чистоты для одежды, обуви, ковров и штор.
+  </div>
+</footer>
+
+</body>
+</html>
